@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Goa Rent A Cab | Airport Taxi, Cab & Self-Drive Rental in Goa</title>
@@ -12755,9 +12756,9 @@
     }
   });
 
-  // bundle_src/entry19.js
-  var require_entry19 = __commonJS({
-    "bundle_src/entry19.js"(exports) {
+  // bundle_src/entry_new.js
+  var require_entry_new = __commonJS({
+    "bundle_src/entry_new.js"(exports) {
       var import_react = __toESM(require_react());
       var import_client = __toESM(require_client());
       window.React = import_react.default;
@@ -13841,6 +13842,7 @@
             return "Select a pickup time.";
           return "";
         };
+        const [bookingDraft, setBookingDraft] = useState(null);
         const goToSummary = () => {
           const err = validate();
           if (err) {
@@ -13848,11 +13850,7 @@
             return;
           }
           setError("");
-          setStep("summary");
-        };
-        const confirm = async () => {
-          setSubmitting(true);
-          const booking = {
+          const draft = {
             id: genBookingId(),
             name: form.name.trim(),
             phone: form.phone.trim(),
@@ -13871,7 +13869,12 @@
             status: "Pending",
             createdAt: Date.now()
           };
-          await onConfirm(booking);
+          setBookingDraft(draft);
+          setStep("summary");
+        };
+        const confirm = async () => {
+          setSubmitting(true);
+          await onConfirm(bookingDraft);
           setSubmitting(false);
         };
         return import_react.default.createElement(
@@ -14023,7 +14026,12 @@
                 "div",
                 { style: styles.summaryActions },
                 import_react.default.createElement("button", { style: styles.backLink, onClick: () => setStep("form") }, "Edit details"),
-                import_react.default.createElement("button", { style: styles.confirmBtn, onClick: confirm, disabled: submitting }, submitting ? "Booking..." : "Confirm booking")
+                import_react.default.createElement(
+                  "a",
+                  { href: `https://wa.me/${BUSINESS_WHATSAPP}?text=${whatsappMessage(bookingDraft)}`, target: "_blank", rel: "noreferrer", style: Object.assign(Object.assign(Object.assign({}, styles.confirmBtn), styles.waConfirmBtn), { marginTop: 0, textDecoration: "none" }), onClick: confirm },
+                  import_react.default.createElement(MessageCircle, { size: 18 }),
+                  " Confirm via WhatsApp"
+                )
               )
             )
           )
@@ -14950,7 +14958,7 @@
       }
     }
   });
-  require_entry19();
+  require_entry_new();
 })();
 /*! Bundled license information:
 
