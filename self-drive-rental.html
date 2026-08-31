@@ -24,10 +24,11 @@
   .topbar a { color:#C7C7C3; text-decoration:none; display:inline-flex; align-items:center; gap:4px; }
   .topbar a.primary { color:#fff; font-weight:700; }
   header { background:#fff; border-bottom:1px solid #E4E6F0; position:sticky; top:0; z-index:10; }
-  .headerInner { max-width:1080px; margin:0 auto; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; }
-  .brand { font-weight:700; font-size:18px; }
-  nav a { font-size:13.5px; font-weight:600; color:#68708A; text-decoration:none; margin-left:16px; }
-  nav a.wa { background:#25D366; color:#fff; padding:8px 14px; border-radius:999px; }
+  .headerInner { max-width:1080px; margin:0 auto; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 10px; }
+  .brand { font-weight:700; font-size:18px; text-decoration:none; color:#10162B; }
+  nav { display:flex; flex-wrap:wrap; gap: 4px 14px; align-items:center; }
+  nav a { font-size:12.5px; font-weight:600; color:#68708A; text-decoration:none; }
+  nav a.wa { background:#25D366; color:#fff; padding:7px 12px; border-radius:999px; }
   main { max-width:760px; margin:0 auto; padding:32px 20px 60px; }
   .eyebrow { font-size:11.5px; font-weight:700; letter-spacing:0.12em; color:#1F51FF; margin-bottom:10px; }
   h1 { font-size:clamp(26px,6vw,38px); line-height:1.1; margin:0 0 14px; letter-spacing:-0.01em; }
@@ -43,9 +44,19 @@
   .fleetCard span { font-size:12.5px; color:#68708A; }
   .destChips { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
   .destChips span { background:#fff; border:1px solid #E4E6F0; border-radius:999px; padding:8px 14px; font-size:13px; }
+  .relatedLinks { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+  .relatedLinks a { background:#fff; border:1px solid #E4E6F0; border-radius:999px; padding:8px 14px; font-size:12.5px; font-weight:600; text-decoration:none; color:#1F51FF; }
   footer { background:#0B1130; color:#C7C7C3; padding:24px 20px; text-align:center; font-size:12.5px; }
   footer a { color:#fff; text-decoration:none; font-weight:700; }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LK58K10M2E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LK58K10M2E');
+</script>
 </head>
 <body>
 <header>
@@ -55,12 +66,15 @@
   <a href="tel:+919284775474">+91 92847 75474</a>
 </div>
   <div class="headerInner">
-    <a href="/" class="brand" style="text-decoration:none;color:#10162B;">Rent Cab Goa</a>
+    <a href="/" class="brand">Rent Cab Goa</a>
     <nav>
       <a href="/">Home</a>
       <a href="/airport-taxi.html">Airport Taxi</a>
       <a href="/self-drive-rental.html" style="color:#10162B;">Self-Drive</a>
       <a href="/sightseeing-packages.html">Sightseeing</a>
+      <a href="/suv-rental-goa.html">SUV Rental</a>
+      <a href="/budget-cab-goa.html">Budget Cabs</a>
+      <a href="/monthly-car-rental-goa.html">Monthly Rental</a>
       <a class="wa" href="https://wa.me/919096750758" target="_blank" rel="noreferrer">WhatsApp</a>
     </nav>
   </div>
@@ -70,7 +84,6 @@
   <h1>Self-Drive Cars,<br/><span class="accent">your pace, your plan.</span></h1>
   
 <p>Prefer to drive yourself around Goa? We rent hatchbacks, SUVs and MUVs on a self-drive basis for tourists and locals alike — no driver, no restrictions on your itinerary, just you and the open road.</p>
-
 <h2>What you'll typically need</h2>
 <ul>
   <li>A valid driving license (details confirmed when you book)</li>
@@ -78,18 +91,24 @@
   <li>Security deposit (varies by vehicle — ask us on WhatsApp for the exact amount)</li>
 </ul>
 <p>Exact requirements and deposit amounts depend on the vehicle and rental duration — message us on WhatsApp and we'll confirm everything before you book, no surprises.</p>
-
 <h2>Popular self-drive vehicles</h2>
 <div class="fleetGrid">
   <div class="fleetCard"><b>Maruti Suzuki Ignis</b><span>5 seats · From ₹1,100/day</span></div>
   <div class="fleetCard"><b>Maruti Suzuki Baleno</b><span>5 seats · From ₹1,400/day</span></div>
   <div class="fleetCard"><b>Hyundai Venue</b><span>5 seats · From ₹2,500/day</span></div>
 </div>
-
 <a class="cta wa" href="https://wa.me/919096750758?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20self-drive%20car%20rental%20in%20Goa." target="_blank" rel="noreferrer">Ask About Self-Drive on WhatsApp →</a>
 <br/>
 <a class="cta" href="/" style="margin-top:10px;">See Full Fleet &amp; Book Online</a>
 
+  <h2>Explore more</h2>
+  <div class="relatedLinks">
+    <a href="/airport-taxi.html">Airport Taxi</a>
+    <a href="/sightseeing-packages.html">Sightseeing</a>
+    <a href="/suv-rental-goa.html">SUV Rental</a>
+    <a href="/budget-cab-goa.html">Budget Cabs</a>
+    <a href="/monthly-car-rental-goa.html">Monthly Rental</a>
+  </div>
 </main>
 <footer>
   <div>Rent Cab Goa — local cabs and self-drive rentals across Goa.</div>
